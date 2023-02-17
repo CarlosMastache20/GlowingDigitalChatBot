@@ -1,0 +1,48 @@
+{% extends 'blog/base2.html' %}
+{% block content %}
+
+
+<div class="container mt-5 mb-6">
+    <div class="row">
+        <div class="col-sm-12">
+            {% for info in infos %}
+            {% endfor %}       
+            
+            <table class="table table-striped text-center hover" id="tableInfo">
+                <thead>
+                  <tr >
+                    <th class="text-center" scope="col">Nombre</th>
+                    <th scope="col" class="text-center">Celular</th>
+                    <th scope="col" class="text-center">Fecha</th>
+                    <th scope="col" class="text-center">Contactado</th>
+                    <th scope="col" class="text-center">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for info in infos %}
+
+                  <tr>
+                    <td>{{info.nombre}}</td>
+                    <td>{{info.numero}}</td>
+                    <td>{{info.date }}</td>
+                    <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+                    <td>
+                      <button class="btn btn-primary mb-2" disabled>Ya contactado</button>
+                      <form action="{% url 'info_delete' info.id %}" method="POST">
+                        {% csrf_token %}
+
+                        <button  data-keyboard="false" data_backdrop="static" class="btn btn-danger" style="width: 40px;"> <i class="fa fa-trash-o" aria-hidden="true" ></i>  </button>
+                      </form>
+                        
+                    </td>
+
+                  </tr>
+                  {% endfor %}
+     
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

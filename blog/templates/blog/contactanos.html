@@ -1,0 +1,85 @@
+{% extends 'blog/base.html' %}
+
+
+
+
+{% block content %}
+
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(./../../static/blog/images/contacto.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Contactanos </h1>
+							<h2><p>Empieza a generar ganancias con tu cuenta de Facebook</p></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="fh5co-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-md-push-1 animate-box">
+					
+					<div class="fh5co-contact-info">
+						<h3>Información de Contacto</h3>
+						<ul>
+							<li class="address">Calle A S/N, Residencial, <br> Zacatenco, Gustavo A. Madero, <br> 07360 Ciudad de México, CDMX</li>
+							<li class="phone"><a href="tel://+52 951 234 12 12">+52 951 234 12 12</a></li>
+							<li class="url">business@goldenconnectionsecureandfb.com</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-6 animate-box">
+					<h3>Contactanos para empezar a ganar dinero</h3>
+					<form action="/blog/create/info/" method="POST">
+                        {% csrf_token %}
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="nombre">Nombre <i class="fa fa-user-circle" aria-hidden="true"></i></label>
+								<input type="text" for="nombre" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required>
+							</div>
+						
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="numero"> Telefono Celular <i class="fa fa-phone" aria-hidden="true"></i>   </label>
+								<input type="number" name="numero" id="numero" class="form-control" placeholder="Escribe tu numero de celular..." required >
+							</div>
+						</div>
+
+						<div class="form-group">
+                            <button class="btn btn-primary">Enviar</button>
+						</div>
+
+					</form>		
+				</div>
+			</div>
+			
+		</div>
+	</div> 
+	<div id="fh5co-started" style="background-image:url(./../../static/blog/images/colaboracion3.png);">
+		<div class="overlay" ></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Colabora con nosotros para ganar dinero</h2>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<p><a href="/blog/contacto" class="btn btn-default btn-lg">Envianos tu información y enseguida te contactaremos</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends 'blog/base2.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 bg-info">
+            <h1>Hola</h1>
+        </div>
+        <div class="col-sm-8 bg-warning">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, impedit eaque vel explicabo tempore blanditiis velit quibusdam consectetur nam, exercitationem, pariatur dicta modi facilis! Commodi ab sit ad alias aspernatur.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae sequi quam sunt delectus unde repellendus officia, voluptatum rem hic deserunt accusamus iusto modi quaerat. Ipsum molestiae voluptatibus obcaecati esse dolorem!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, laborum accusamus? Nihil commodi mollitia, nobis aliquam, eius iste nam quidem numquam recusandae rerum, debitis provident alias hic animi ut reprehenderit?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolorem deserunt quod blanditiis dolorum laborum hic laboriosam, ut eum. Laudantium quam voluptas facilis fugit numquam corporis reiciendis blanditiis illo voluptatum?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam architecto magnam laboriosam illo repellat eaque molestiae, sunt asperiores, magni velit consectetur, et eligendi? Facere ipsa quod ipsum molestiae asperiores! Quibusdam!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta esse fuga, iure exercitationem libero quos nisi magnam blanditiis ex saepe ratione, itaque laboriosam accusantium fugit. Quia dolores dolore quo dolorem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio corrupti sequi possimus molestiae velit consequatur officiis vitae ipsam, itaque repellat doloremque architecto tempora molestias iure adipisci maxime asperiores repellendus veniam?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptatibus nobis rem amet architecto recusandae delectus facere non inventore sunt. Molestias placeat ad ipsum odio obcaecati debitis alias blanditiis eos.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi facere perferendis itaque blanditiis reiciendis numquam animi saepe, quidem non beatae repudiandae magnam error minus! Dolores perferendis corrupti voluptates ut quam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, vitae incidunt nostrum illo aliquid quam aspernatur et quod. Temporibus maiores illum, quas esse possimus earum sapiente cum nobis veniam laborum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, dolore voluptatibus, laudantium tempore optio saepe quod repellat doloribus, exercitationem ab iure veritatis consectetur. Consequuntur eligendi ex quis illum animi expedita.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt perspiciatis quidem hic recusandae quisquam in rerum tempore voluptas perferendis necessitatibus beatae consequuntur rem nostrum voluptates harum suscipit numquam, cupiditate dignissimos.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellendus dicta minima ab adipisci temporibus, a vel quae doloremque suscipit eos deleniti et nihil rem recusandae, quis est tempora laborum.
+        </div>
+
+        <div class="col-sm-3  bg-sucess">
+            <div class="sticky-top">
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    <div id="app">
+                        
+                        <div id="header" class="color-navbar">
+                            <div></div>
+                            <div class="text-light align-center">
+                                <h2>ChatBot</h2>
+                            </div>
+                            
+                        </div>
+                        <div id="chatbot">
+                            <p class='post post-bot'><span>Hola soy, estoy aquí para ayudarte. Preguntame cualquier duda y yo tratare de responderte y ayudarte en las dudas que tengas</span> </p>
+                        </div>
+                        <div id="form" class="bg-light">
+                            
+                            <div></div>
+                            <div >
+                                <input type="text" id="textInput" name="userMessage" placeholder="Escribe tu mensaje..." rows="1" contenteditable  class="form-control">
+                            </div>
+                            <div>
+                                <button class="btn-transparent btn-icon fas fa-paper-plane" type="submit" id="Send">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="/blog/create/info/" method="POST" class="card card-body mt-3">
+                        {% csrf_token %}
+                        <p class="text-justify">Escribe tus datos para que te podamos contactar lo mas pronto posible y empieces a generar ganancias</p>
+        
+                        <div class="mb-3">
+                            <label for="nombre">Nombre <i class="fa fa-user-circle" aria-hidden="true"></i></label> 
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Escribe tu nombre..." required>                   
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre">Telefono Celular <i class="fa fa-phone" aria-hidden="true"></i> </label> 
+                            <input type="number" name="numero" id="numero" class="form-control" placeholder="Escribe tu numero de celular..." required minlength="10">                   
+                        </div>
+        
+                    
+                        <button class="btn btn-primary">Quiero que me contacten</button>
+                    
+                    </form>
+            </div>     
+        </div>
+        <div class="col-sm-12 bg-dark"></div>
+
+    </div>
+</div>
+   
+    
+
+    <script>
+        function getUserResponse(){
+            var userText = $('#textInput').val()
+            if(!$('#textInput').val()){
+                Swal.fire({
+                icon: 'warning',
+                title: 'El mensaje esta vacio. Por favor escribe un mensaje.',
+                showConfirmButton: false,
+                timer: 1000
+                });
+            }else{
+                var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+userText + timeStamp()+"</span></div>";
+                $('#textInput').val("");
+                $scrollDown();
+                $('#chatbot').append(userHTML);
+
+                $.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+                var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>"+ data + timeStamp() +"</span></div>";
+                const timeTyping = 500 + Math.floor(Math.random() * 2000);
+                $('#chatbot').append(returnedMessage);
+                $scrollDown();
+
+            })
+            }
+        }
+
+       $('#Send').click(function(){
+            getUserResponse();
+        }) 
+    
+        // Chat input
+	    $("#textInput").on("keyup", (event) => {
+		if (event.which === 13)  getUserResponse();; // Use enter to send
+	    });
+	
+    /*** TIMESTAMPS ***/
+
+	function timeStamp() {
+		const timestamp = new Date();
+		const hours = timestamp.getHours();
+		let minutes = timestamp.getMinutes();
+		if (minutes < 10) minutes = "0" + minutes;
+		const html = `<span class="timestamp">${hours}:${minutes}</span>`;
+		return html;
+	};
+
+
+    function $scrollDown() {
+		const $container = $("#chatbot");
+		const $maxHeight = $container.height();
+		const $scrollHeight = $container[0].scrollHeight;
+		if ($scrollHeight > $maxHeight) $container.scrollTop($scrollHeight);
+	}
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+
+		

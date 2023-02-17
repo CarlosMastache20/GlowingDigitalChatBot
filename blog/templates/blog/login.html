@@ -1,0 +1,87 @@
+{% extends 'blog/base2.html' %}
+{% block content %}
+
+
+
+
+<div id="contenedor">
+  <div id="central">
+      <div id="login">
+        <div class="inferior">
+          <a href="/blog/inicio"><i class="fa fa-backward" aria-hidden="true"></i> Volver</a>
+      </div>
+          <div class="titulo">
+              Glowing Digital Login
+          </div>
+          <form id="loginform" action="/blog/login/" method="POST">
+            {% csrf_token %}
+              <input name="username"  type="text"  placeholder="Usuario" required>
+              
+              <input type="password" name="password"  placeholder="********" required>
+              
+              <button  title="Ingresar" name="Ingresar">Inciar Sesión</button>
+          </form>
+          {% if error %}
+          <br>
+          <div class="alert alert-danger" role="alert">
+            {{error}}
+          </div>
+          {% endif %}
+      </div>
+   
+  </div>
+</div>
+
+
+
+
+
+<!-- <div class="jumbotron">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-lg-6 align-items-center" style="margin-left: auto;">
+      <img src="https://cdn.bizneo.com/blog/wp-content/uploads/2020/03/trabajo-colaborativo.jpg" style="margin-top: 60px;" width="100%" height="100%"  alt="">
+    </div>
+    <div class="col-md-8 col-lg-6" style="margin-top: 7px;">
+      <div class="login d-flex align-items-center py-9">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto" style="margin-top: 60px;">
+              <h3 class="login-heading mb-4 text-center"> Login Glowing Digital</h3>
+              <form action="/blog/login/" method="POST">
+                {% csrf_token %}
+
+                <div class="form-floating mb-3">
+                  
+                  <input required type="text" name="username" class="form-control"  placeholder="Escribe tu nombre de usuario" autocomplete="off">
+                  <label for="username">Usuario</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input required type="password" name="password" class="form-control"  placeholder="********" autocomplete="off">
+                  <label for="password">Contraseña</label>
+                </div>
+
+                <div class="d-grid">
+                  <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2">Iniciar Sesión</button>
+                
+                </div>
+
+              </form>
+              {% if error %}
+              <div class="alert alert-danger" role="alert">
+                {{error}}
+              </div>
+              {% endif %}
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+</div> -->
+
+
+{% endblock %}
