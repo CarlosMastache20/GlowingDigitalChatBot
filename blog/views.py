@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
+#from chatterbot import ChatBot
+#from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 import random
 import re 
