@@ -1,0 +1,15 @@
+venv/
+*.pyc
+MANIFEST
+.DS_Store
+/.idea
+/.tox
+*.egg-info/
+*.swp
+*.swo
+arcanist/.phutil_module_cache
+autogen_docs_config.json
+.pyre/
+.python-version
+.vscode/
+geckodriver.log
