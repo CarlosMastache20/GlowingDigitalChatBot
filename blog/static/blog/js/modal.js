@@ -2,6 +2,8 @@ const openModal = document.querySelector('.hero__cta');
 const modal = document.querySelector('.chatbot-fixed');
 const closeModal = document.querySelector('.modal__close');
 
+
+
 openModal.addEventListener('click', (e) =>{
     e.preventDefault();
     modal.classList.add('chatbot-fixed--show');

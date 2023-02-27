@@ -38,6 +38,7 @@
   
 	<script src="{% static 'blog/js/modernizr-2.6.2.min.js' %}"></script>
     <script src="https://kit.fontawesome.com/17034a460b.js" crossorigin="anonymous"></script>
+	
 
 </head>
 <body>
@@ -144,7 +145,7 @@
 			</div>
         </div>
         <div id="chatbot">
-            <p class='post post-bot'><span>Hola soy, estoy aquí para ayudarte. Preguntame cualquier duda y yo tratare de responderte y ayudarte en las dudas que tengas</span> </p>
+            <p class='post post-bot'><span>Hola estoy aquí para ayudarte. Preguntame cualquier duda y yo tratare de responderte y ayudarte en las preguntas que tengas</span> </p>
         </div>
         <div id="form1" class="bg-light">
             
@@ -229,6 +230,12 @@
 				}
 
 			
+		</script>
+
+		<script>
+			$(window).on("load", function(){
+				modal.classList.add('chatbot-fixed--show');
+			})
 		</script>
 
 
