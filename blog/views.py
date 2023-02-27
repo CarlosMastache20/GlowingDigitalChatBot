@@ -57,6 +57,8 @@ def nosotros(request):
 def contacto(request):
     return render(request, 'blog/contactanos.html')
 
+def testimonios(request):
+    return render(request, 'blog/testimonios.html')
     
 def modal(request):
     return render(request, 'blog/modal.html')
