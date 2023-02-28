@@ -15,6 +15,7 @@
                     <th scope="col" class="text-center">Celular</th>
                     <th scope="col" class="text-center">Fecha</th>
                     <th scope="col" class="text-center">Contactado</th>
+                    <th scope="col" class="text-center">Contactado por: </th>
                     <th scope="col" class="text-center">Opciones</th>
                   </tr>
                 </thead>
@@ -26,6 +27,8 @@
                     <td>{{info.numero}}</td>
                     <td>{{info.date }}</td>
                     <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+                    <td><i class="fas fa-user" style="color:#240090"></i> {{info.tEncargado}} </td>
+
                     <td>
                       <button class="btn btn-primary mb-2" disabled>Ya contactado</button>
                       <form action="{% url 'info_delete' info.id %}" method="POST">

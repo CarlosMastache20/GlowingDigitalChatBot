@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 import random
 import re 
 from .models import Info
-from .forms import createInfo
+from .forms import createInfo, personaEcargada
 from .utils import * 
 from django.http.response import JsonResponse
 from django.utils import timezone
@@ -145,7 +145,7 @@ def AllInfo(request):
     #data = {'infos' : infos}
     #return JsonResponse(data)
 
-    infos=Info.objects.filter(contactado=False)
+    infos=Info.objects.filter(contactado=False, tEncargado=None)
     return render(request, 'blog/info.html', {
         'infos':infos
     })
@@ -161,8 +161,8 @@ def AllInfoContacted(request):
 def contacted(request, info_id):
     info= get_object_or_404(Info, pk=info_id )
     if request.method == 'POST':
-        info.contactado = True
-        info.save()
+        form = personaEcargada(request.POST, instance=info)
+        form.save()
         messages.success(request, 'Persona Marcada como contactada')
         return redirect('obtenerinfo')  
 

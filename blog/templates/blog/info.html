@@ -13,6 +13,7 @@
                     <th scope="col" class="text-center">Celular</th>
                     <th scope="col" class="text-center">Fecha</th>
                     <th scope="col" class="text-center">Contactado</th>
+                    <th scope="col" class="text-center">Contactado por: </th>
                     <th scope="col" class="text-center">Opciones</th>
                   </tr>
                 </thead>
@@ -20,16 +21,35 @@
                   {% for info in infos %}
 
                   <tr>
-                    <td>{{info.nombre}}</td>
-                    <td>{{info.numero}}</td>
+                    <td> {{info.nombre}} </td>
+                    <td> {{info.numero}} </td>
                     <td>{{info.date }}</td>
                     <td><i class="fa fa-close" style="color: red;"></i></td>
-                    <td style="align-items:normal ;">
-                            <form action="{% url 'info_complete' info.id %}" method="POST">
+                    <td> 
+                      <form action="{% url 'info_complete' info.id %}" method="POST">
 
-                              {% csrf_token %}
+                        {% csrf_token %}
+                      <select class="form-select" aria-label="Default select example" required name="tEncargado">
+                        <option selected>Selecciona una persona</option>
+                        <option value="Christian Fabela">Christian Fabela</option>
+                        <option value="Jose Ricardo">Jose Ricardo</option>
+                        <option value="Edgar">Edgar</option>
+                        <option value="Erika Rodriguez">Erika Rodriguez</option>
+                        <option value="Kenia Santiago Castillo">Kenia Santiago Castillo</option>
+                        <option value="Marian Barranco">Marian Barranco</option>
+                        <option value="Natasha Díaz">Natasha Díaz</option>
+                        <option value="Orlando">Orlando</option>
+                        <option value="Samantha Benitez">Samantha Benitez</option>
+                        <option value="Zimri Garcia">Zimri Garcia</option>
+
+                      </select>
+                   </td>
+
+
+                    <td style="align-items:normal ;">
+                          
       
-                            <button  data-keyboard="false" data_backdrop="static" class="btn btn-success mb-2">contactado</button>
+                            <button  name="contactado" value="true" data-keyboard="false" data_backdrop="static" class="btn btn-success mb-2">contactado</button>
       
                           </form>
                        

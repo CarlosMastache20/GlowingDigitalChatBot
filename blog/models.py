@@ -7,6 +7,7 @@ class Info(models.Model):
     numero = models.CharField(max_length=14)
     contactado = models.BooleanField(default=False)
     date = models.DateTimeField(null=True)
+    tEncargado = models.CharField(max_length=100, null=True)
 
 
     def __str__(self):
