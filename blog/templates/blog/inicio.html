@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-	
+{% load static %}
+
 	
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(./../../static/blog/images/inicio.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -10,8 +11,8 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Genera Dinero Con Nosotros ¿Que Necesitas? <br> Solo Una Cuenta De Facebook</h1>
-							<h2 style="color: white;"><a >Comunicate con uno de nuestros asesores para iniciar a ganar dinero </a> </h2>
-							<p><a class="btn btn-primary btn-lg btn-learn" href="/blog/contacto">Contactar</a> </p>
+							<h2 style="color: rgb(255, 255, 255);">Comunicate con uno de nuestros asesores para iniciar a ganar dinero </h2>
+							<p><a class="btn btn-primary btn-lg btn-learn" href="/blog/contacto"  style="width: 340px; text-align: center;">Clic aqui <br> y empieza a generar ingresos </a> </p>
 						</div>
 					</div>
 				</div>
@@ -37,27 +38,27 @@
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a ><img src="https://d1ih8jugeo2m5m.cloudfront.net/2022/04/oportunidades-de-negocio-1200x685.jpg" alt="Glowing Digital" class="img-responsive">
+					<a ><img src="{% static 'blog/images/iniio3.jpg' %}" alt="Glowing Digital" class="img-responsive">
 						<h3 style="color: white; font-weight: bold;">Solo con tu cuenta de Facebook</h3>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a ><img src="https://www.eltiempo.com/files/image_640_428/uploads/2022/01/01/61d09fad73cd5.jpeg" alt="Glowing Digital" class="img-responsive" style="height: 245px; width: 420px;">
+					<a ><img src="{% static 'blog/images/inicio2.jpeg' %}" alt="Glowing Digital" class="img-responsive" >
 						<h3  style="color: white; font-weight: bold;">Dinero al instante </h3>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a ><img src="https://img.caminofinancial.com/wp-content/uploads/2022/06/02222325/business-owners-in-front-of-computer.webp" alt="Glowing Digital" class="img-responsive">
+					<a ><img src="https://www.mediasource.mx/hs-fs/hubfs/Campa%C3%B1as%20publicitarias%20-%20qu%C3%A9%20son,%20c%C3%B3mo%20hacer%20una%20y%2010%20ejemplos%20exitosos/Publicidad%20digital%20-%20qu%C3%A9%20es%20y%20cu%C3%A1nto%20invertir%20en%20ella/que-es-la-publicidad-digital.png?width=900&name=que-es-la-publicidad-digital.png" alt="Glowing Digital" class="img-responsive">
 						<h3  style="color: white; font-weight: bold;">Campañas publicitarias en medios digitales.</h3>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a><img src="https://konfio-blog.s3.us-west-2.amazonaws.com/wp-content/uploads/2019/05/22064542/Estrategias-que-debes-fortalecer-para-llevar-al-exito-tu-negocio.jpg" alt="Glowing Digital" class="img-responsive"  style="height: 280px; width: 420px;">
+					<a><img src="https://imgs.search.brave.com/NgsOGAZw4BdeWocHk55AamWjAk06xKRVjqmTNhnHLTM/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly9kbTBx/eDh0MGk5Z2M5LmNs/b3VkZnJvbnQubmV0/L3RodW1ibmFpbHMv/dmlkZW8vRDhxYS0y/RS90d28tYnVzaW5l/c3MtcHJvZmVzc2lv/bmFscy1oYXZpbmct/YS1tZWV0aW5nLWlu/LW1vZGVybi1vZmZp/Y2UtdGFsa2luZy10/b2dldGhlcl9oZmds/eXVuMWJfdGh1bWJu/YWlsLTEwODBfMDEu/cG5n" alt="Glowing Digital" class="img-responsive" height="500px"  >
 						<h3  style="color: white; font-weight: bold;">Clientes Internacionales</h3>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a ><img src="https://imgs.search.brave.com/a8wcHfrCgIMrMxukf_8_a9xuDIhkaI7ZqIkNpzemBQ8/rs:fit:1200:1200:1/g:ce/aHR0cDovL2V4aXNv/ZnQuY29tLmFyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIwLzA3/LzI0LTEuanBn" alt="Glowing Digital" class="img-responsive">
+					<a ><img src="https://maestriasydiplomadostec.blob.core.windows.net/maestriasydiplomados/uploads/programaec/imagen/554/LIVE_Data-Science-for-Business.jpg" alt="Glowing Digital" class="img-responsive" height="400px"  >
 						<h3  style="color: white; font-weight: bold;">Presencia en plataformas digitales de publicidad.</h3>
 					</a>
 				</div>
@@ -86,129 +87,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-testimonial" class="fh5co-bg-section mb-2">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2 style="color: #240090; font-weight: bolder;">Testimonios de nuestros colaboradores</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="row animate-box">
-						<div class="owl-carousel owl-carousel-fullwidth">
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://imgs.search.brave.com/uDRBi7vKT-66Hxl5bBYkMyyRJsEelrTB8KcSACpVMss/rs:fit:1200:988:1/g:ce/aHR0cHM6Ly9tc21m/b3RvZ3JhZmlhLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8wNi9NU01fZm90/b19wZXJmaWxfcHJv/ZmVzaW9uYWxfTWFk/cmlkXzM2LmpwZw" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Angel Márquez, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Muchas Gracias! una empresa que si cumple, los recomiendo &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUxZHgwQ1e8uacbbtItPhQOWlDQMCcNc228-K3IrQD_CuB0Ys-2dH5EyP_h3_VBV4M4hc&usqp=CAU" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Adrian Lomen Guzman, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Mi pago se realizo a la tercer semana que ingrese, muchas gracias, me hacia falta ese ingreso.&rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://www.blogdelfotografo.com/wp-content/uploads/2022/01/retrato-anillo-luz.jpg" alt="user" width="60px" height="120px">
-									</figure>
-									<span>de León Morales, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Muchas Gracias por mis pagos, los recomendare con mi familia y amigos. &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://dam.muyinteresante.com.mx/wp-content/uploads/2018/05/fotos-de-perfil-son-mejor-elegidas-por-personas-extranas-afirma-estudio.jpg" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Maria del Carmen Camacho, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Fueron muy amables conmigo, nunca tuve problemas con ellos y todo estuvo en orden con mis cuentas &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://socialtools.me/wp-content/uploads/2016/04/foto-de-perfil.jpg" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Reyna Martinez Hernandéz, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Muchas gracias, yo ya ingrese a todos mis hermanos y ya estan por recibir su pago  &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_image__small/public/articulos/perfil-resilencia.jpg" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Mariana Martinez, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Los pagos llegan a su tiempo y es muy facil, recibo ganancias por solo usar mi Facebook &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-
-							
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://imgs.search.brave.com/Xs5O3NL0ItAWZcefzX9pG3WFH0-qN06pdKiFzN3J0Kw/rs:fit:1137:910:1/g:ce/aHR0cHM6Ly9tc21m/b3RvZ3JhZmlhLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8wMy9NU01fZm90/b19wZXJmaWxfcHJv/ZmVzaW9uYWxfTWFk/cmlkXzQzLTEuanBn" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Beatriz Ramos Delgado, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Entre por recomendación de una amiga y recibio mas ganancias por referirme. Excelente!! &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://imgs.search.brave.com/bcdHuoUEwPkL0C9xXAU4b0NiZyXDWfJK4mqbmHmu5hI/rs:fit:414:414:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vNzM2/eC9hNi84ZS83MS9h/NjhlNzExZWYwNmQ0/NWVjMTljMjRlMmZl/ZjAzZGVhNy5qcGc" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Cifredo Cabadilla Peralta, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Confien, es una empresa responsable, cumple su palabra. Excelente empresa, su apoyo es bueno  &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="https://img.aeroexpo.online/images_ar/projects/images-g/elevar-perfil-mujeres-ingenieria-6393-14652745.jpg" alt="user" width="60px" height="120px">
-									</figure>
-									<span>Paola Jiménez, via <a href="#" class="twitter">Facebook</a></span>
-									<blockquote>
-										<p style="font-size: larger;">&ldquo;Cumplen con su pago y su trato es muy amable. El pago me lo dieron en unos dias pero al final lo realizaron. Muchas gracias.   &rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	
 
 	<div id="fh5co-started" style="background-image:url(./../../static/blog/images/colaboracion2.jpg);">
 		<div class="overlay"></div>
