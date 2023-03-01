@@ -18,6 +18,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
+
 # bot = ChatBot('chatbot', read_only = False, logic_adapters=[{
     
     
@@ -114,11 +115,21 @@ def signin(request):
 
 def getResponse(request):
 
-    split_message = re.split(r'\s|[,:;.?-_]\s*', request.GET.get('userMessage').lower())
+    split_message = re.split(r'\s|[,:;.?-_]\s*', normalize(request.GET.get('userMessage').lower()))
     response = check_all_messages(split_message)
     return HttpResponse(response)
 
-
+def normalize(s):
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+    )
+    for a, b in replacements:
+        s = s.replace(a, b).replace(a.upper(), b.upper())
+    return s
 
 def create_info(request):
 
@@ -138,6 +149,16 @@ def create_info(request):
         #    'form' : createInfo,
         #    'guardado': 'datos enviados correctamente' 
         #})
+
+def create_infoBot(request):
+    form = createInfo(request.POST)
+    newInfo = form.save(commit=False)
+    newInfo.date = timezone.now()
+    newInfo.save()
+    messages.success(request, 'Tu registro ya esta hecho')
+    return redirect('inicio')  
+
+
 
 @login_required
 def AllInfo(request):

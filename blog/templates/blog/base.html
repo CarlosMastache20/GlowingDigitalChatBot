@@ -64,7 +64,7 @@
 					<div class="col-xs-1">
 						<div id="fh5co-logo">
 							
-							<a  href="/blog/inicio"><img src="{% static 'blog/images/glowingDigital.png' %}" alt="" style="width: 200px; height: 70px;"></a></div>
+							<a  href="/blog/inicio"><img src="{% static 'blog/images/glowingDigital.png' %}" alt="" style="width: 150px; height: 60px;"></a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
@@ -147,7 +147,56 @@
 			</div>
         </div>
         <div id="chatbot">
-            <p class='post post-bot'><span>Hola estoy aquí para ayudarte. Preguntame cualquier duda y yo tratare de responderte y ayudarte en las preguntas que tengas</span> </p>
+		{% if messages %}
+			{% for m in messages %}
+			<div class="row">
+				<div class="col-md-2 col-sm-2 col-xs-2"></div>
+
+				<div class="col-md-8 col-sm-8 col-xs-8">
+					<p><div class="alert alert-success" role="alert">
+						{{m}}
+					  </div></p>	
+				</div>
+			</div>
+			{% endfor %}
+		{% else %}
+			<div id="fomrHide" style="margin-left: 10px;" >
+				<p class="text-center" style="margin: 3px 3px; font-weight: 600;"><span>Rellena este formulario antes de empezar para poder darte mas información detallada</span> </p>
+		<form action="/blog/create/info/bot/" method="POST"  >
+			{% csrf_token %}
+
+			<div class="row form-group">
+				<div class="col-md-2 col-sm-2 col-xs-2"></div>
+				<div class="col-md-8 col-sm-8 col-xs-8" >
+					<label for="nombre">Nombre <i class="fa fa-user-circle" aria-hidden="true"></i></label>
+					<input type="text" for="nombre" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required  >
+				</div>
+			</div>
+
+			<div class="row form-group" >
+				<div class="col-md-2 col-sm-2 col-xs-2"></div>
+
+				<div class="col-md-8 col-sm-8 col-xs-8">
+					<label for="numero"> Telefono Celular <i class="fa fa-phone" aria-hidden="true"></i>   </label>
+					<input type="number" name="numero" id="numero" class="form-control" placeholder="Escribe tu numero de celular..." required >
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="form-group" >
+				<button class="btn btn-primary">Enviar</button>
+				<button class="btn btn-outline-primary" id="BotonParaEsconder">Ya he hecho el registro</button>
+
+			</div>
+			</div>
+
+
+		</form>	 	
+	</div>
+		{% endif %}
+			 
+						
+			<p class='post post-bot'><span>Hola estoy aquí para ayudarte. Preguntame cualquier duda y yo tratare de responderte y ayudarte en las preguntas que tengas</span> </p>
+
         </div>
         <div id="form1" class="bg-light">
             
@@ -235,9 +284,24 @@
 		</script>
 
 		<script>
+		   $(function(){
+        		$("#BotonParaEsconder").click(function(){
+            		$("#fomrHide").hide();
+
+        		});
+    		});
+		</script>
+
+		
+
+		<script>
 			$(window).on("load", function(){
 				modal.classList.add('chatbot-fixed--show');
 			})
+		</script>
+
+		<script>
+		
 		</script>
 
 

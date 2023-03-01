@@ -136,7 +136,6 @@ hr {
 	width: 380px;
 	display: grid;
 	grid-template-rows: 50px 1fr auto;
-	border-radius: 30px;
 	transform: var(--transform);
 	transition: transform .3s;
 	
@@ -159,7 +158,6 @@ hr {
 	max-height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	border-radius: 30px;
 }
 
 #chatbot p {
@@ -243,6 +241,7 @@ form#form-start {
 
 /* Conversation */
 
+
 #message-board {
 	display: grid;
 	align-self: end;
@@ -252,7 +251,6 @@ form#form-start {
 	max-height: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	border-radius: 30px;
 }
 
 .post {
@@ -270,7 +268,7 @@ form#form-start {
     font-family: Arial, sans-serif;
 	font-size: 13px;
     color: rgb(22, 22, 22);
-    background: rgba(255, 152, 0, 0.1);
+    background: rgba(255, 152, 0, 0.1)
 	/*border-top-left-radius: 0;*/
 }
 

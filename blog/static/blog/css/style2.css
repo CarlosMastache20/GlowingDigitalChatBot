@@ -1095,17 +1095,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 .price-box:hover{
-  background:#240090;
-  color: #fff;
+  background:#fff;
+  color: #240090 ;
 
 }
 
 .price-box.popular .btn-select-plan {
-  background: #240090;
+  background: #ffffff;
 }
 
 .price-box.popular .btn-select-plan:hover {
-  background: white;
+  background: #4000ffb0;
 }
 
 .price-box.popular .price {
@@ -1114,11 +1114,11 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 .price-box.popular .price i :hover {
-  color: white;
+  color: rgb(43, 74, 160);
 }
 
 .price-box.popular i :hover {
-  color: white;
+  color: rgb(26, 78, 190);
 }
 
 

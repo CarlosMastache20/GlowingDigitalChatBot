@@ -20,5 +20,7 @@ urlpatterns = [
     path('testimonios', views.testimonios, name='testimonios'),
   #  path('viewAdmin', views.viewAdmin, name='viewAdmin'),
     path('create/info/', views.create_info, name='create/info'),
+    path('create/info/bot/', views.create_infoBot, name='create/info/bot'),
+
 
 ]
