@@ -1,8 +1,14 @@
 {% extends 'blog/base2.html' %}
+{% load static %}
+
 {% block content %}
 
 
 <div class="container mt-5 mb-6">
+  <button id="btnExportar" class="btn btn-success">
+    <i class="fas fa-file-excel"></i> Exportar datos a Excel
+  </button>
+ <br> <br>  
     <div class="row">
         <div class="col-sm-12">
             {% for info in infos %}
@@ -14,7 +20,7 @@
                     <th class="text-center" scope="col">Nombre</th>
                     <th scope="col" class="text-center">Celular</th>
                     <th scope="col" class="text-center">Fecha</th>
-                    <th scope="col" class="text-center">Contactado</th>
+                    <th scope="col" class="text-center">Estado</th>
                     <th scope="col" class="text-center">Contactado por: </th>
                     <th scope="col" class="text-center">Opciones</th>
                   </tr>
@@ -26,11 +32,10 @@
                     <td>{{info.nombre}}</td>
                     <td>{{info.numero}}</td>
                     <td>{{info.date }}</td>
-                    <td> <i class="fa fa-check" aria-hidden="true" style="color: green;"></i> </td>
+                    <td style="color: green;"> Ya contactado <i class="fa fa-check" aria-hidden="true" ></i> </td>
                     <td><i class="fas fa-user" style="color:#240090"></i> {{info.tEncargado}} </td>
 
                     <td>
-                      <button class="btn btn-primary mb-2" disabled>Ya contactado</button>
                       <form action="{% url 'info_delete' info.id %}" method="POST">
                         {% csrf_token %}
 
@@ -48,4 +53,23 @@
     </div>
 </div>
 
+<br>
+
+
+<script>
+  const $btnExportar = document.querySelector("#btnExportar"),
+     $tableInfo = document.querySelector("#tableInfo");
+ 
+ $btnExportar.addEventListener("click", function() {
+   let tableExport = new TableExport($tableInfo, {
+     exportButtons: false, // No queremos botones
+     filename: "PersonasContactadas", //Nombre del archivo de Excel
+     sheetname: "Personas Contactadas", //Título de la hoja
+ });
+ let datos = tableExport.getExportData();
+ let preferenciasDocumento = datos.tableInfo.csv;
+ tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
+ });
+  
+ </script>
 {% endblock %}
