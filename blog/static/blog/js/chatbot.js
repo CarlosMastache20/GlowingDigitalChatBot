@@ -27,6 +27,7 @@ $('#Send').click(function(){
     getUserResponse();
 }) 
 
+
 // Chat input
 $("#textInput").on("keyup", (event) => {
 if (event.which === 13)  getUserResponse();; 
@@ -50,3 +51,7 @@ const $maxHeight = $container.height();
 const $scrollHeight = $container[0].scrollHeight;
 if ($scrollHeight > $maxHeight) $container.scrollTop($scrollHeight);
 }
+
+
+
+    

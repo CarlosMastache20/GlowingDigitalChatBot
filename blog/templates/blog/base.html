@@ -61,10 +61,10 @@
 		<div class="top-menu">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-1">
+					<div class="col-xs-12">
 						<div id="fh5co-logo">
 							
-							<a  href="/blog/inicio"><img src="{% static 'blog/images/glowingDigital.png' %}" alt="" style="width: 150px; height: 60px;"></a></div>
+							<a  href="/blog/inicio"><img src="{% static 'blog/images/glowingDigital.png' %}" alt="" style="width: 260px; height: 90px;"></a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
@@ -147,7 +147,7 @@
 			</div>
         </div>
         <div id="chatbot">
-		{% if messages %}
+		<!-- {% if messages %}
 			{% for m in messages %}
 			<div class="row">
 				<div class="col-md-2 col-sm-2 col-xs-2"></div>
@@ -192,23 +192,41 @@
 
 		</form>	 	
 	</div>
-		{% endif %}
+		{% endif %} -->
 			 
 						
-			<p class='post post-bot'><span>Hola estoy aquí para ayudarte. Preguntame cualquier duda y yo tratare de responderte y ayudarte en las preguntas que tengas</span> </p>
+			<p class='post post-bot'><span>Hola que tal. Nosotros somos Glowing Digital y nos complace mucho el saber que estas interesado en tener un ingreso extra con nosotros. ¿ Con quién tengo el gusto? ¿ Tienes unos minutos para que te comparta más información? ✅ 
+				<br> <br>
+				<button class="btn btn-primary"  onclick="getUserResponse1()" value="Si" id="Send1"  > Si <i class="fa fa-check" aria-hidden="true"></i> </button>
+			
+				<button class="btn btn-danger"  onclick="getUserResponse2()" id="Send2" value="No">  No  <i class="fa-solid fa-x"></i> </button>
+			</span> </p>
+			
 
         </div>
-        <div id="form1" class="bg-light">
+		<input id="textInput1" type="text" value="uno" hidden name="userMessage" >
+		<input id="textInput2" type="text" value="dos" hidden name="userMessage" >
+		<input id="textInput3" type="text" value="tres" hidden name="userMessage" >
+		<input id="textInput4" type="text" value="cuatro" hidden name="userMessage" >
+		<input id="textInput5" type="text" value="cinco" hidden name="userMessage" >
+		<input id="textInput6" type="text" value="seis" hidden name="userMessage" >
+		<input id="textInput7" type="text" value="siete" hidden name="userMessage" >
+
+
+
+
+
+       <div id="form1" class="bg-light">
             
-            <div></div>
+            <!-- <div></div>
             <div >
-                <input type="text" id="textInput" name="userMessage" placeholder="Escribe tu mensaje..." rows="1" contenteditable  class="form-control">
+                <input type="text" id="textInput" name="userMessage" placeholder="Elige una ópcion o escribe una duda..." rows="1" contenteditable  class="form-control">
             </div>
             <div>
                 <button  class="btn-transparent btn-icon fas fa-paper-plane" type="submit" id="Send">
                 </button>
-            </div>
-        </div>
+            </div> -->
+        </div> 
 </div>
 
 </div>
@@ -301,8 +319,172 @@
 		</script>
 
 		<script>
-		
-		</script>
+		function getUserResponse1(){
+			var userText = $('#textInput1').val()
+			var responseButton = $('#Send1').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput1').val("");
+		$('#textInput1').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>"+ data + timeStamp() +"</span></div>";
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send1").hide();
+	$("#Send2").hide();
+}
+
+
+function getUserResponse2(){
+			var userText = $('#textInput2').val()
+			var responseButton = $('#Send2').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput2').val("");
+		$('#textInput2').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>"+ data + timeStamp() +"</span></div>";
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send1").hide();
+	$("#Send2").hide();
+}
+
+function getUserResponse3(){
+			var userText = $('#textInput3').val()
+			var responseButton = $('#Send3').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput3').val("");
+		$('#textInput3').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = " <div class='post post-bot'><span class='span-user'>Chatbot: </span><span> Te comento que nosotros somos una empresa dedicada a medición de la interacción de distintos temas como son autos, moda, viajes, maquillaje, etc. Trabajando de la mano del área publicitaria de Facebook logramos estas mediciones. En conclusión nosotros usaremos tu perfil para crear una pagina en la cual se publicara contenido de los temas antes mencionados para ver la reacción de la gente. Nos encanta aclarar que tu perfil es totalmente respetado así como jamas usamos tus datos personales para otros fines. </span></div> <div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send3").hide();
+	$("#Send4").hide();
+}
+
+
+function getUserResponse4(){
+			var userText = $('#textInput4').val()
+			var responseButton = $('#Send4').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput3').val("");
+		$('#textInput3').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span> <video width='300' height='240' controls autoplay> <source src='{% static 'blog/images/video.mp4' %}' type='video/mp4'> Your browser does not support the video tag. </video> </span></div>  <div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send3").hide();
+	$("#Send4").hide();
+}
+
+
+
+function getUserResponse5(){
+			var userText = $('#textInput5').val()
+			var responseButton = $('#Send5').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput5').val("");
+		$('#textInput5').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = " <div class='post post-bot'><span class='span-user'>Chatbot: </span><span> El colaborar con nosotros es super fácil. Ya que para generar tus primeros $2000 pesos solo tenemos que esperar a que Facebook nos apruebe tu pagina y tu perfil. Como nos regimos sobre las reglas y políticas de Facebook todo lo trabajamos a través del business manager. Que es la parte publicitaria de Facebook. Esto para que tu puedas seguir teniendo un uso normal de tu cuenta es super importante que tu cuenta tengas tus datos actualizados como numero y correo y tenga un nombre real. </span></div> <div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send5").hide();
+}
+
+
+
+function getUserResponse6(){
+			var userText = $('#textInput6').val()
+			var responseButton = $('#Send6').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput6').val("");
+		$('#textInput6').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send6").hide();
+	$("#Send7").hide();
+
+}
+
+
+function getUserResponse7(){
+			var userText = $('#textInput7').val()
+			var responseButton = $('#Send7').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput7').val("");
+		$('#textInput7').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send6").hide();
+	$("#Send7").hide();
+
+}
+
+
+
+
+</script>
 
 
 </body>

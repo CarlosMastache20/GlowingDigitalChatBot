@@ -672,22 +672,8 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-project {
   margin-bottom: 30px;
 }
-.fh5co-project > a {
-  display: block;
-  color: #000;
-  position: relative;
-  bottom: 0;
-  overflow: hidden;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.fh5co-project > a img {
-  position: relative;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
+
+
 .fh5co-project > a:after {
   opacity: 0;
   visibility: hidden;
@@ -728,15 +714,41 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 14px;
   bottom: 20px;
 }
-.fh5co-project > a:hover {
-  -webkit-box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
+
+.fh5co-project:hover .carta{
+  transform: rotateY(180deg);
 }
-.fh5co-project > a:hover:after {
-  opacity: 1;
-  visibility: visible;
+
+.carta {
+  transform-style: preserve-3d;
+  transition: all 1s linear;
 }
+
+.cara {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.cara.detras {
+  position: absolute;
+
+  transform: rotateY(180deg);
+}
+
+.contenedor-imagen-texto{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.centrado{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 @media screen and (max-width: 768px) {
   .fh5co-project > a:hover:after {
     opacity: 0;
@@ -1658,3 +1670,13 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 0;
 }
 
+.carta-box {
+  width: 370px;
+  height: 230px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carta-box:hover .carta {
+    transform: rotateY(180deg);
+}
