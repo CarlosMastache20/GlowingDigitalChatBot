@@ -2057,6 +2057,16 @@ img {
   text-align: center;
 }
 
+.card_title2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  color: white;
+  text-align: center;
+}
+
 .card_text {
   font-size: 0.875rem;
   line-height: 1.5;

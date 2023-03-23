@@ -80,6 +80,8 @@
 							<li class="active"><a href="/blog/contacto">Contacto</a></li>
 							<li class="active"><a href="/blog/testimonios">Testimonios</a></li>
 							<li class="active"><a href="/blog/nuestras/paginas">Nuestras Paginas</a></li>
+							<li class="active"><a href="/blog/politicas">Politicas</a></li>
+
 
 
 							<li class="btn-cta"><a href="/blog/login"><span>Login</span></a></li>
@@ -99,7 +101,7 @@
 				<div class="col-md-6 fh5co-widget">
 					
 					<p><a href="https://goldenconnectionsecureandfb.com/?page_id=3">Politicas de Privacidad</a></p>
-					<p><a href="https://goldenconnectionsecureandfb.com/?page_id=152">Tèrminos Y Condiciones</a></p>
+					<p><a href="https://goldenconnectionsecureandfb.com/?page_id=152">Términos Y Condiciones</a></p>
 
 				</div>
 				
@@ -207,7 +209,7 @@
 
 		<p class='post post-bot' id="saludo"><span>Hola que tal. Nosotros somos Glowing Digital y nos complace mucho el saber que estas interesado en tener un ingreso extra con nosotros. ¿Con quién tengo el gusto?  ✅ 
 			<br> <br>
-			<input type="text" class="form-control" placeholder="Escribe tu nombre.." id="nombre" > <br>
+			<input type="text" class="form-control" placeholder="Escribe tu nombre.." id="nombreC" > <br>
 			<button class="btn btn-primary"  onclick="guardarNombre()" > Enviar <i class="fa-solid fa-paper-plane"></i></button>	
 		</span>
 		</p>
@@ -470,6 +472,10 @@ function getUserResponse6(){
 	$("#Send6").hide();
 	$("#Send7").hide();
 
+	$("#final1").hide();
+	$("#final2").hide();
+
+
 }
 
 
@@ -517,6 +523,9 @@ function getUserResponse8(){
 	$("#Send8").hide();
 	$("#Send7").hide();
 
+	$("#final1").hide();
+	$("#final2").hide();
+
 }
 
 
@@ -545,7 +554,7 @@ function getUserResponse9(){
 
 
 function guardarNombre(){
-var nombre = $("#nombre").val().toUpperCase();
+var nombre = $("#nombreC").val().toUpperCase();
 
 if (nombre===''){
 	alert("Escribe tu nombre");

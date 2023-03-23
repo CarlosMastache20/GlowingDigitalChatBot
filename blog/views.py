@@ -67,6 +67,12 @@ def paginas(request):
 def modal(request):
     return render(request, 'blog/modal.html')
 
+def paginas(request):
+    return render(request, 'blog/nuestraspaginas.html')
+
+def politicas(request):
+    return render(request, 'blog/politicas.html')    
+
 
 @login_required
 def registrarUsuarios(request):
