@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 1001;
 }
 .fh5co-nav .top-menu {
-  padding: 28px 0;
+  padding: 20px 0;
 }
 .fh5co-nav .top {
   padding: 7px 0;
@@ -1680,3 +1680,392 @@ h1, h2, h3, h4, h5, h6, figure {
 .carta-box:hover .carta {
     transform: rotateY(180deg);
 }
+
+@media only screen and (max-width:1000px)
+{
+
+  .carta-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+ 
+} 
+
+
+
+
+.imagenlogo{
+  width: 250px; 
+  height: 90px;
+}
+
+
+
+@media only screen and (max-width:900px)
+{
+
+  .imagenlogo{
+    width: 140px;
+    height: 60px;
+  }
+ 
+} 
+
+
+.botonredondo{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+#imagenredonda{
+  width: 55px;
+  height: 55px;
+  
+}
+
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.9s ease 0s;
+  width: 32%;
+}
+
+.cardBox:hover .card2 {
+  transform: rotateY( 180deg);
+}
+
+.card2 {
+  background: #222;
+  cursor: default;
+  height: 270px;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card2 p {
+  margin-bottom: 1.8em;
+}
+
+.card2 .front,
+.card2 .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+.card2 .back {
+  transform: rotateY( 180deg);
+}
+
+.card2 .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 12.s ease 0s;
+}
+
+.card2 .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card2 .back {
+  background: #240090;
+}
+
+.cardBox:nth-child(1) .card2 .front {
+  background:linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.466)), url('./../images/imagen1.jpg');
+ height: 100%;
+ background-size: 100% 100%;
+
+
+
+}
+
+
+.cardBox:nth-child(1) .card2 .front:before {
+  background-color: rgba(0,0,0,0.6);
+
+}
+
+
+.cardBox:nth-child(2) .card2 .front {
+  background:linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.466)), url(https://eldiariony.com/wp-content/uploads/sites/2/2020/12/pexels-luca-sammarco-6162932.jpg?quality=75&strip=all&w=1200) ;
+ height: 100%;
+ background-size: 100% 100%;
+
+}
+
+.cardBox:nth-child(3) .card2 .front {
+  background:linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.466)), url(https://qph.cf2.quoracdn.net/main-qimg-1ac43d6efd0219241db530721dc8c66f-pjlq)  ;
+ height: 100%;
+ background-size: 100% 100%;
+
+}
+
+.cardBox:nth-child(4) .card2 .front {
+  background:linear-gradient(rgba(0, 0, 0, 0.459),rgba(0, 0, 0, 0.637)), url(https://lamenteesmaravillosa.com/wp-content/uploads/2021/08/persona-movil-emoticonos-redes-sociales.jpg) ;
+ height: 100%;
+ background-size: 100% 100%;
+
+}
+
+.cardBox:nth-child(5) .card2 .front {
+  background:linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.466)), url('./../images/imagen5.jpg') ;
+ height: 100%;
+ background-size: 100% 100%;
+
+}
+
+.cardBox:nth-child(6) .card2 .front {
+  background:linear-gradient(rgba(0, 0, 0, 0.555),rgba(0, 0, 0, 0.5)), url('./../images/redes.jpg') ;
+ height: 100%;
+ background-size: 100% 100%;
+
+}
+
+
+.cardBox:nth-child(2) .card2 .back {
+  background: #240090;
+}
+
+.cardBox:nth-child(3) .card2 .back {
+  background: #240090;
+}
+
+.cardBox:nth-child(4) .card2 .back {
+  background: #240090;
+}
+
+.cardBox:nth-child(5) .card2 .back {
+  background: #240090;
+}
+
+.cardBox:nth-child(6) .card2 .back {
+  background: #240090;
+}
+
+
+.textcard{
+  font-size: medium;
+
+}
+
+.textcardsmalltext{
+  font-size: medium;
+  padding-top: 15%;
+}
+
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .card2 {
+    height: 285px;
+  }
+  .card2Box:last-child {
+    margin-bottom: 3%;
+  }
+  .textcard{
+    font-size: small;
+  }
+
+  .textcardsmalltext{
+    font-size: small;
+    padding-top: 15%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
+  }
+  .card2 {
+    height: 260px;
+  }
+  .textcard{
+    font-size: small;
+  }
+  .textcardsmalltext{
+    font-size: small;
+    padding-top: 15%;
+  }
+
+  .botonredondo{
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+  }
+  
+  #imagenredonda{
+    width: 40px;
+    height: 40px;
+    
+  }
+  
+  
+}
+
+
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.btnC {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btnC:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.cards_item2 {
+  display: flex;
+  padding: 1rem;
+}
+
+.card_image{
+  margin: 0 auto;
+}
+
+.buttonCard{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+  .cards_item2 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 25%;
+  }
+
+  .cards_item2 {
+    width: 33.333%;
+  }
+
+ 
+}
+
+.card3 {
+
+
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+}
+
+.card_title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  color: white;
+  text-align: center;
+}
+
+.card_text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+.card_content2 {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #210086d3 40%, #24028ad5 100%);
+}
+

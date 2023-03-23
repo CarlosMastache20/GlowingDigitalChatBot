@@ -60,6 +60,9 @@ def contacto(request):
 
 def testimonios(request):
     return render(request, 'blog/testimonios.html')
+
+def paginas(request):
+    return render(request, 'blog/nuestraspaginas.html')
     
 def modal(request):
     return render(request, 'blog/modal.html')

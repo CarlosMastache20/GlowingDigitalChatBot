@@ -374,5 +374,23 @@ form#form-start {
 }
 
 
+@media only screen and (max-width:500px)
+{
+
+	#app {
+		background: #eeeeee;
+		top: 47px;
+		left: 19px;
+		height: 400px;
+		width: 340px;
+		display: grid;
+		grid-template-rows: 50px 1fr auto;
+	}
+	
+ 
+} 
+
+
+
 
 

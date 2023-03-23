@@ -18,6 +18,7 @@ urlpatterns = [
     path('logout/', views.salir, name='logout'),
     path('login/', views.signin, name='login'),
     path('testimonios', views.testimonios, name='testimonios'),
+    path('nuestras/paginas', views.paginas, name='nuestras_paginas'),
   #  path('viewAdmin', views.viewAdmin, name='viewAdmin'),
     path('create/info/', views.create_info, name='create/info'),
     path('create/info/bot/', views.create_infoBot, name='create/info/bot'),

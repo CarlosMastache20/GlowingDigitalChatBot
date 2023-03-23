@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Glowing Digital</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<meta name="author" content="freehtml5.co" />
 
@@ -52,26 +52,35 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-right">
-						<p class="num" > Facebook:<a href="https://web.facebook.com/profile.php?id=100089808819336" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Ganancias México</a> </p>
-						<p class="num"  > WhatsApp:<a href="https://wa.me/message/QVHSQK5BIXBSO1" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> 667 356 9609</a>|<a href="https://wa.link/9gx40n " target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> 81 2421 4920</a> </p>
+						<p class="num" ><a href="https://www.facebook.com/profile.php?id=100091326723157" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Glowing Digital</a> </p>
+						<p class="num"><a href="https://wa.me/message/QVHSQK5BIXBSO1" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> 667 356 9609</a>|<a href="https://wa.link/9gx40n " target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> 81 2421 4920</a> </p>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				
 			</div>
 		</div>
 		<div class="top-menu">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12">
-						<div id="fh5co-logo">
-							
-							<a  href="/blog/inicio"><img src="{% static 'blog/images/glowingDigital.png' %}" alt="" style="width: 260px; height: 90px;"></a></div>
+					<div class="col-md-4">
+						<div class="col-xs-12">
+							<div id="fh5co-logo">
+								
+								<a  href="/blog/inicio"><img src="{% static 'blog/images/glowingDigital.png' %}" alt=""  class="imagenlogo"></a></div>
+						</div>
 					</div>
-					<div class="col-xs-11 text-right menu-1">
+					<div class="col-md-8 text-right menu-1">
 						<ul>
 							<li class="active"><a href="/blog/inicio">Inicio</a></li>
 							<li class="active"><a href="/blog/nosotros">Nosotros</a></li>
 							<li class="active"><a href="/blog/contacto">Contacto</a></li>
 							<li class="active"><a href="/blog/testimonios">Testimonios</a></li>
+							<li class="active"><a href="/blog/nuestras/paginas">Nuestras Paginas</a></li>
+
 
 							<li class="btn-cta"><a href="/blog/login"><span>Login</span></a></li>
 						</ul>
@@ -88,7 +97,7 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-6 fh5co-widget">
-					<h4>Sobre Nosotros</h4>
+					
 					<p><a href="https://goldenconnectionsecureandfb.com/?page_id=3">Politicas de Privacidad</a></p>
 					<p><a href="https://goldenconnectionsecureandfb.com/?page_id=152">Tèrminos Y Condiciones</a></p>
 
@@ -99,8 +108,8 @@
 					<h4>Contacto</h4>
 					<ul class="fh5co-footer-links">
 						<li > <i class="fa fa-home" aria-hidden="true" style="color:#240090 "></i> Calle A S/N, Residencial, <br> Zacatenco, Gustavo A. Madero, <br> 07360 Ciudad de México, CDMX</li>
-						<li ><i class="fa fa-phone" aria-hidden="true" style="color:#240090 "></i> <a href="tel://+52 951 234 12 12">+52 951 234 12 12</a></li>
-						<li ><i class="fa-sharp fa-solid fa-envelope " style="color:#240090 " ></i> business@goldenconnectionsecureandfb.com</li>
+						<li ><i class="fa fa-phone" aria-hidden="true" style="color:#240090 "></i> <a href="tel://+52 951 234 12 12">+52 844 353 96 48</a></li>
+						<!-- <li ><i class="fa-sharp fa-solid fa-envelope " style="color:#240090 " ></i> business@goldenconnectionsecureandfb.com</li> -->
 					</ul>
 				</div>
 
@@ -125,16 +134,17 @@
 </div>
 
 <div class="button-fixed">
-	<button type="button" class="btn btn-primary hero__cta"  style="width: 320px; height: 70px;" id="abrirModal" onclick="OcultarButton(this)">
-		¿Tienes dudas? Da click aquí. 
-		</button>
-</div>
+	<button type="button" class="btn btn-primary hero__cta botonredondo"   id="abrirModal" onclick="OcultarButton(this)">
+	<i aria-hidden="true"><img src="{% static 'blog/images/apoyo.png' %}" alt="" id="imagenredonda" ></i>
+
+	</button>
+	</div>
 
 
 
 
 <div class="chatbot-fixed">
-    <div id="app">
+    <div id="app" class="appChat">
                         
         <div id="header" class="color-navbar align-center">
 			<div>
@@ -193,14 +203,16 @@
 		</form>	 	
 	</div>
 		{% endif %} -->
+
+
+		<p class='post post-bot' id="saludo"><span>Hola que tal. Nosotros somos Glowing Digital y nos complace mucho el saber que estas interesado en tener un ingreso extra con nosotros. ¿Con quién tengo el gusto?  ✅ 
+			<br> <br>
+			<input type="text" class="form-control" placeholder="Escribe tu nombre.." id="nombre" > <br>
+			<button class="btn btn-primary"  onclick="guardarNombre()" > Enviar <i class="fa-solid fa-paper-plane"></i></button>	
+		</span>
+		</p>
 			 
 						
-			<p class='post post-bot'><span>Hola que tal. Nosotros somos Glowing Digital y nos complace mucho el saber que estas interesado en tener un ingreso extra con nosotros. ¿ Con quién tengo el gusto? ¿ Tienes unos minutos para que te comparta más información? ✅ 
-				<br> <br>
-				<button class="btn btn-primary"  onclick="getUserResponse1()" value="Si" id="Send1"  > Si <i class="fa fa-check" aria-hidden="true"></i> </button>
-			
-				<button class="btn btn-danger"  onclick="getUserResponse2()" id="Send2" value="No">  No  <i class="fa-solid fa-x"></i> </button>
-			</span> </p>
 			
 
         </div>
@@ -211,6 +223,9 @@
 		<input id="textInput5" type="text" value="cinco" hidden name="userMessage" >
 		<input id="textInput6" type="text" value="seis" hidden name="userMessage" >
 		<input id="textInput7" type="text" value="siete" hidden name="userMessage" >
+		<input id="textInput8" type="text" value="ocho" hidden name="userMessage" >
+		<input id="textInput9" type="text" value="nueve" hidden name="userMessage" >
+
 
 
 
@@ -331,7 +346,7 @@
 
 
 		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
-        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>"+ data + timeStamp() +"</span></div>";
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>"+ data + timeStamp() +"</span></div>";
         const timeTyping = 500 + Math.floor(Math.random() * 2000);
         $('#chatbot').append(returnedMessage);
         $scrollDown();
@@ -354,7 +369,7 @@ function getUserResponse2(){
 
 
 		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
-        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>"+ data + timeStamp() +"</span></div>";
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>"+ data + timeStamp() +"</span></div>";
         const timeTyping = 500 + Math.floor(Math.random() * 2000);
         $('#chatbot').append(returnedMessage);
         $scrollDown();
@@ -376,7 +391,7 @@ function getUserResponse3(){
 
 
 		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
-        var returnedMessage = " <div class='post post-bot'><span class='span-user'>Chatbot: </span><span> Te comento que nosotros somos una empresa dedicada a medición de la interacción de distintos temas como son autos, moda, viajes, maquillaje, etc. Trabajando de la mano del área publicitaria de Facebook logramos estas mediciones. En conclusión nosotros usaremos tu perfil para crear una pagina en la cual se publicara contenido de los temas antes mencionados para ver la reacción de la gente. Nos encanta aclarar que tu perfil es totalmente respetado así como jamas usamos tus datos personales para otros fines. </span></div> <div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>" + data + timeStamp() + "</span></div>" ;
         const timeTyping = 500 + Math.floor(Math.random() * 2000);
         $('#chatbot').append(returnedMessage);
         $scrollDown();
@@ -399,7 +414,7 @@ function getUserResponse4(){
 
 
 		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
-        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span> <video width='300' height='240' controls autoplay> <source src='{% static 'blog/images/video.mp4' %}' type='video/mp4'> Your browser does not support the video tag. </video> </span></div>  <div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span> <video width='300' height='240' controls autoplay> <source src='{% static 'blog/images/video.mp4' %}' type='video/mp4'> Your browser does not support the video tag. </video> </span></div>  <div class='post post-bot'><span class='span-user'>Glowing: </span><span>" + data + timeStamp() + "</span></div>" ;
         const timeTyping = 500 + Math.floor(Math.random() * 2000);
         $('#chatbot').append(returnedMessage);
         $scrollDown();
@@ -423,7 +438,7 @@ function getUserResponse5(){
 
 
 		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
-        var returnedMessage = " <div class='post post-bot'><span class='span-user'>Chatbot: </span><span> El colaborar con nosotros es super fácil. Ya que para generar tus primeros $2000 pesos solo tenemos que esperar a que Facebook nos apruebe tu pagina y tu perfil. Como nos regimos sobre las reglas y políticas de Facebook todo lo trabajamos a través del business manager. Que es la parte publicitaria de Facebook. Esto para que tu puedas seguir teniendo un uso normal de tu cuenta es super importante que tu cuenta tengas tus datos actualizados como numero y correo y tenga un nombre real. </span></div> <div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>" + data + timeStamp() + "</span></div>" ;
         const timeTyping = 500 + Math.floor(Math.random() * 2000);
         $('#chatbot').append(returnedMessage);
         $scrollDown();
@@ -446,7 +461,7 @@ function getUserResponse6(){
 
 
 		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
-        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>" + data + timeStamp() + "</span></div>" ;
         const timeTyping = 500 + Math.floor(Math.random() * 2000);
         $('#chatbot').append(returnedMessage);
         $scrollDown();
@@ -470,7 +485,7 @@ function getUserResponse7(){
 
 
 		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
-        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Chatbot: </span><span>" + data + timeStamp() + "</span></div>" ;
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>" + data + timeStamp() + "</span></div>" ;
         const timeTyping = 500 + Math.floor(Math.random() * 2000);
         $('#chatbot').append(returnedMessage);
         $scrollDown();
@@ -481,7 +496,74 @@ function getUserResponse7(){
 
 }
 
+function getUserResponse8(){
+			var userText = $('#textInput8').val()
+			var responseButton = $('#Send8').val()
 
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput8').val("");
+		$('#textInput8').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>" + data + timeStamp() + "</span></div>" ;
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send8").hide();
+	$("#Send7").hide();
+
+}
+
+
+function getUserResponse9(){
+			var userText = $('#textInput9').val()
+			var responseButton = $('#Send9').val()
+
+			var userHTML = "<div class='post post-user'><span class='span-user'> Tú: </span><span>"+responseButton + timeStamp()+"</span></div>";
+        $('#textInput9').val("");
+		$('#textInput9').val("");
+        $scrollDown();
+        $('#chatbot').append(userHTML);
+
+
+		$.get('/blog/getResponse',{userMessage: userText}).done(function(data){
+        var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span>" + data + timeStamp() + "</span></div>" ;
+        const timeTyping = 500 + Math.floor(Math.random() * 2000);
+        $('#chatbot').append(returnedMessage);
+        $scrollDown();
+
+    })
+	$("#Send9").hide();
+	$("#Send7").hide();
+
+}
+
+
+function guardarNombre(){
+var nombre = $("#nombre").val().toUpperCase();
+
+if (nombre===''){
+	alert("Escribe tu nombre");
+}else{
+	$("#saludo").hide();
+	sessionStorage.setItem("nombre", nombre);
+	obtenerNombre=sessionStorage.getItem("nombre")
+
+
+	var returnedMessage = "<div class='post post-bot'><span class='span-user'>Glowing: </span><span> Mucho gusto <span style='font-weight: bold;'>" + obtenerNombre + "  </span> ¿Tienes unos minutos para que te comparta más información? ✅ <br> <br> <button class='btn btn-primary'  onclick='getUserResponse1()'' value='Si' id='Send1'> Si <i class='fa fa-check' aria-hidden='true'></i> </button> <button class='btn btn-danger'  onclick='getUserResponse2()' id='Send2' value='No'>  No  <i class='fa-solid fa-x'></i> </button>"+ timeStamp() + "</span></div>" ;
+    const timeTyping = 500 + Math.floor(Math.random() * 2000);
+    $('#chatbot').append(returnedMessage);
+    $scrollDown();
+}
+
+
+
+}
 
 
 </script>

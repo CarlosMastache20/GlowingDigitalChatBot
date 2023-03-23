@@ -163,7 +163,7 @@ button,
 
 
 
-#app {
+.appChat {
 	background: #ffffff;
 	top: 47px;
 	left: 19px;
@@ -596,6 +596,26 @@ form#form-start {
 .inferior a:hover {
     color: white;
 }
+
+
+
+@media only screen and (max-width:500px)
+{
+
+	.appChat {
+		background: #c50d0d;
+		top: 47px;
+		left: 19px;
+		height: 300px;
+		width: 300px;
+		display: grid;
+		grid-template-rows: 50px 1fr auto;
+		border-radius: 30px;
+	}
+	
+ 
+} 
+
 
 
 
