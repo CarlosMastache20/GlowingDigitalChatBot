@@ -45,9 +45,9 @@ def check_all_messages(message):
 
             response('Los requerimientos que pedimos para que tu puedas comenzar a tener un ingreso extra constante con nosotros son muy pocos: <br> º Contar con un perfil de Facebook real (nombre real) y que sea activo. <br>º Tener al menos 6 meses de antigüedad con tu perfil. <br> º Que la cuenta por ingresar no esté o haya colaborado con otra empresa en una colaboración similar. <br>Te recordamos que al colaborar con nosotros no tienes que invertir un solo peso. <br> <button class="btn btn-primary" style="font-size: 12px;" onclick="getUserResponse8()" id="Send8" value="continuar leyendo"> Continuar leyendo  </button>  <button class="btn btn-success" style="font-size: 12px;" onclick="getUserResponse4()" value="Ver video" id="Send4" > Un video <i class="fa-sharp fa-solid fa-circle-play"></i>   </button>' ,['cinco'], single_response=True)
 
-            response('El colaborar con nosotros es super fácil. Ya que para generar tus primeros $2000 pesos solo tenemos que esperar a que Facebook nos apruebe tu pagina y tu perfil. Como nos regimos sobre las reglas y políticas de Facebook todo lo trabajamos a través del business manager. Que es la parte publicitaria de Facebook. Esto para que tu puedas seguir teniendo un uso normal de tu cuenta es super importante que tu cuenta tengas tus datos actualizados como numero y correo y tenga un nombre real.<br> <button class="btn btn-primary" style="font-size: 12px;" onclick="getUserResponse9()" id="Send9" value="continuar leyendo"> Continuar leyendo  </button>  <button class="btn btn-success" style="font-size: 12px;" onclick="getUserResponse4()" value="Ver video" id="Send4" > Un video <i class="fa-sharp fa-solid fa-circle-play"></i>   </button>',['ocho'], single_response=True)
+            response('El colaborar con nosotros es super fácil. Ya que para generar tus primeros $2000 pesos solo tenemos que esperar a que Facebook nos apruebe tu pagina y tu perfil. Como nos regimos sobre las reglas y políticas de Facebook todo lo trabajamos a través del business manager. Que es la parte publicitaria de Facebook. Esto para que tu puedas seguir teniendo un uso normal de tu cuenta, es super importante que en tu cuenta tengas tus datos actualizados como numero, correo y tenga un nombre real.<br> <button class="btn btn-primary" style="font-size: 12px;" onclick="getUserResponse9()" id="Send9" value="continuar leyendo"> Continuar leyendo  </button>  <button class="btn btn-success" style="font-size: 12px;" onclick="getUserResponse4()" value="Ver video" id="Send4" > Un video <i class="fa-sharp fa-solid fa-circle-play"></i>   </button>',['ocho'], single_response=True)
 
-            response('Le daremos seguimiento a todo tu proceso a través de un grupo de WhatsApp en el cual nos vas a compartir igual el método de pago en el cual deseas que te depositemos. <br> Tu única tarea para apoyarnos será compartir tu pagina entre amigos y familiares para que así la verificación sea mas sencilla <br> <p style="font-weight: bold;"> ¿Que tal te parecio la información? ¿Deseas iniciar? </p> <a id="final1"  class="btn btn-primary" style="font-size: 14px;" href="https://wa.me/qr/RFADP5HZ7RLND1"" target="_blank" onclick="getUserResponse6()">Si <button id="Send6" value="Si" hidden></button> <i class="fa fa-check"></i>  </a>  	<a id="final2" href="https://wa.me/qr/RFADP5HZ7RLND1"" target="_blank"  class="btn btn-warning" style="font-size: 14px;" onclick="getUserResponse7()" >Tengo dudas <button id="Send7" value="Tengo dudas" hidden></button> <i class="fa-solid fa-question"></i>  </a>',['nueve'], single_response=True)
+            response('Le daremos seguimiento a todo tu proceso a través de un grupo de WhatsApp en el cual nos vas a compartir igual el método de pago por el que deseas que te depositemos. <br> Tu única tarea para apoyarnos será compartir tu pagina entre amigos y familiares para que así la verificación sea mas sencilla <br> <p style="font-weight: bold;"> ¿Que tal te parecio la información? ¿Deseas iniciar? </p> <a id="final1"  class="btn btn-primary" style="font-size: 14px;" href="https://wa.me/qr/RFADP5HZ7RLND1"" target="_blank" onclick="getUserResponse6()">Si <button id="Send6" value="Si" hidden></button> <i class="fa fa-check"></i>  </a>  	<a id="final2" href="https://wa.me/qr/RFADP5HZ7RLND1"" target="_blank"  class="btn btn-warning" style="font-size: 14px;" onclick="getUserResponse7()" >Tengo dudas <button id="Send7" value="Tengo dudas" hidden></button> <i class="fa-solid fa-question"></i>  </a>',['nueve'], single_response=True)
 
 
             response('Perfecto, En breve serás enlazado con un asesor ',['seis'], single_response=True)
@@ -55,15 +55,10 @@ def check_all_messages(message):
             response('En breve serás enlazado con un asesor',['siete'], single_response=True)
 
 
-            
-
-
             response('Tú puedes obtener una recompensa monetaria por el uso de tu cuenta . puede ser desde $2000.00 incluso más todo depende de la calidad de tu cuenta . <br> <br> Una vez que sincronicemos tu cuenta, te agregamos a un grupo de WhatsApp, donde llevarémos la información de tu proceso y el control de tus pagos correspondientes. <br> <br>  Tu pagó puede realizarse por cualquiera de estas 2 opciones: Una transferencia bancaria o una recarga telefónica. Cuando te agregamos a tu grupo de WhatsApp te pedimos los datos bancarios para tu pago <br> <br> Si quieres empezar lo mas pronto posible a ganar dinero da click aqui para que rellenes nuestro formulario con tus datos y lo siguiente que haremos es comunicarnos contigo <a href="/blog/contacto" class="nav-link">Click aqui</a>',['cuanto', 'como' , 'Como' , 'Comó' , 'gano' , 'Gano', 'dinero', 'tengo', 'dineor', 'dinerp', 'obtengo',  'depositan', 'pagan', 'cuanto', 'pagar', 'pago', 'deposito', 'dineor', 'ingresos', 'generar' , 'requisitos'], single_response=True)
 
 
             response('Para nada , tú no tienes que pagar ni invertir un solo peso , al contrarío nosotros te pagamos a ti por permitirnos trabajar en tu cuenta.', ['algo', 'canbio', 'camvio', 'acambio', 'cambio', 'cambió', 'depesitar', 'dar', 'depositar', 'depositár', 'pagar' ],  single_response=True)
-
-
 
             response('Hola muy buen día claro que sí , somos una empresa de marketing dedicada a realizar cuentas publicitarias en Facebook business que es la parte comercial de Facebook sobre temas cómo : Música , Mascotas , Belleza, entre otras . Por permitirnos trabajar en tu cuenta te ofrecemos un pago de $2000.00 que se te dará cuando la cuenta se verifique <br> <br> Si quieres empezar lo mas pronto posible a ganar dinero da click aqui para que rellenes nuestro formulario con tus datos y lo siguiente que haremos es comunicarnos contigo <a href="/blog/contacto" class="nav-link">Click aqui</a>', ['realizan', 'hacen', 'hacén', 'dedican', 'dedicán','acen', 'asen', 'hasen', 'deican', 'son', 'don', 'informes', 'info', 'ifno', 'unfo', 'informacio', 'información', 'infó', 'Información', 'informacion', 'infromacion' ],  single_response=True)
 
@@ -73,7 +68,6 @@ def check_all_messages(message):
             response('Todo el proceso tarda entre 1 a 2 meses en los cuales debe estar sincronizada tu cuenta .', ['cuanto', 'cuantó','tarda', 'tiempo', 'tiemop', 'van', 'tomar', 'prestada', 'cuenta', 'adentro', 'dentro'  ],  single_response=True)
 
 
-        
             response('Estoy bien ¿Y tú?', ['estas', 'va', 'vas', 'sientes'], single_response=True)
 
 
@@ -100,7 +94,6 @@ def check_all_messages(message):
             response(' Por medio de su grupo de WhatsApp nos indica que ya no desea continuar con su proceso, nosotros eliminamos la pagina y le regresamos su cuenta sin problemas.', ['continuar', 'seguir', 'deseo', ], single_response=True)
 
             
-
             response('Claro! Usted puede seguir haciendo uso normal de su cuenta, nada se trabaja directamente es su perfil todo lo trabajamos en Business Facebook', ['seguir', 'seguír', 'utilizando', 'utilizandó',  'cuenta',  'cuentá', 'puedo', 'quitar',], single_response=True)
 
             response('Claro! Usted puede seguir haciendo uso normal de su cuenta, nada se trabaja directamente es su perfil todo lo trabajamos en Business Facebook', ['seguir', 'utilizando', 'cuenta', 'puedo', 'quitar',], single_response=True)
@@ -112,8 +105,6 @@ def check_all_messages(message):
             response('Un gusto ayudarte', ['gracias', 'nos vemos', 'adios'], single_response=True)
 
             
-
-        
             response('Un gusto ayudarte', ['gracias', 'nos vemos', 'adios'], single_response=True)
 
 
