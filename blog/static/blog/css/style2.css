@@ -1780,7 +1780,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .cardBox:nth-child(1) .card2 .front {
-  background: url('./../images/imagen1.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.466)), url('./../images/imagen1.jpg');
  height: 100%;
  background-size: 100% 100%;
 
