@@ -1719,10 +1719,10 @@ h1, h2, h3, h4, h5, h6, figure {
 } 
 
 
-@media only screen and (max-width:420px)
+@media only screen and (max-width:450px)
 {
   .fh5co-nav #fh5co-logo {
-    padding-left: 28%;
+    padding-left: 29%;
 
   }
  
