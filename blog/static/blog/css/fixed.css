@@ -381,7 +381,7 @@ form#form-start {
 		background: #eeeeee;
 		top: 47px;
 		left: 19px;
-		height: 400px;
+		height: 440px;
 		width: 340px;
 		display: grid;
 		grid-template-rows: 50px 1fr auto;

@@ -1914,6 +1914,16 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+
+.botonCelular{
+  font-size: 12px;
+}
+
+.videoGD{
+  width:280px;
+  height: 240px;
+}
+
 @media screen and (max-width: 480px) {
   .cardBox {
     width: 94.5%;
@@ -1940,7 +1950,19 @@ h1, h2, h3, h4, h5, h6, figure {
     height: 40px;
     
   }
-  
+
+  .botonCelular{
+    background: #240090;
+    color: #fff;
+    border: solid #240090;
+   
+    font-size: 10px;
+  }
+
+  .videoGD{
+    width: 230px;
+    height: 180px;
+  }
   
 }
 
