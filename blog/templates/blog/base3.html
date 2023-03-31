@@ -325,6 +325,20 @@
 		</script>
 
 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#send').click(function() {
+			if ($('#numero').val().length != 10 || isNaN($('#numero').val())) {
+				$('#numero').css('border-color','#FF0000');
+				document.getElementById('spanNumber').innerHTML = "El número de teléfono debe tener 10 digitos.";
+				return false;
+			}
+		
+		});
+	});
+	</script>
+
+
 		<script>
 		function getUserResponse1(){
 			var userText = $('#textInput1').val()

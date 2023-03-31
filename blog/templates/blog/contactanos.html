@@ -28,7 +28,7 @@
 				<div class="col-md-8 animate-box">
 					<h4 style="text-align: center; color: #240090; font-weight: 600;"> ¿Cómo empiezas a generar dinero?<br><br> 1.-Registrar tu nombre y teléfono 
 						<br><br> 2.-En breve un asesor se pondrá en contacto contigo  </h4>
-					<form action="/blog/create/info/" method="POST">
+					<form action="/blog/create/info/" method="POST" id="formulario">
                         {% csrf_token %}
 
 						<div class="row form-group">
@@ -42,13 +42,15 @@
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="numero"> Teléfono Celular <i class="fa fa-phone" aria-hidden="true"></i>   </label>
-								<input type="number" name="numero" id="numero" class="form-control" placeholder="Escribe tu teléfono celular..." required >
+								<input type="number" name="numero" id="numero" class="form-control" placeholder="Escribe tu teléfono celular..." required minlength="10" maxlength="10">
+								<div id="spanNumber" class="form-text" style="color: red;"></div>
+
 							</div>
 						</div>
 
 						<div class="form-group">
-                            <button class="btn btn-primary">Enviar</button>
-						</div>
+							<input type="submit" class="btn btn-primary" id="send" value="Enviar">
+				</div>
 
 					</form>		
 				</div>
@@ -56,5 +58,6 @@
 			
 		</div>
 	</div> 
+
 	
 {% endblock %}
